@@ -39,7 +39,7 @@ public class ApplicationTest {
     public void testApplication(TestContext context) {
         final Async async = context.async();
         //创建一个http客户端，发送请求到http服务端
-        vertx.createHttpClient().getNow(8080, "localhost", "/",
+        vertx.createHttpClient().getNow(8088, "localhost", "/",
                 response -> {
                     response.handler(body -> {
                         context.assertTrue(body.toString().contains("Hello"));
